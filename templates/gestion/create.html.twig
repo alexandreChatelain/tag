@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <main>
+        <h1>creation article</h1>
+
+        <!--Afficher le formulaire generé par symfony-->
+        {{ form_start(formImage) }}
+
+        <div class="form-group">
+            <label>Categorie</label>
+            {{ form_widget(formImage.categorie) }}
+            </div>
+
+        <div class="form-group">
+            <label>Url de l'image</label>
+            {{ form_widget(formImage.url) }}
+        </div>
+
+        <button type="submit">Ajouter l'image</button>
+
+        {{ form_end(formImage) }}
+    </main>
+
+{% endblock %}
